@@ -1,14 +1,14 @@
 //
-//  ViewController.h
+//  Macrosses.h
 //  BitcointCourseTest
 //
 //  Created by MacBook on 27.02.2018.
 //  Copyright © 2018 AsanAmetov. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef Macroses_h
+#define Macroses_h
 
-@interface ViewController : UIViewController
+#define API [Network sharedInstance]
 
-@end
-
+#endif /* Macroses_h */

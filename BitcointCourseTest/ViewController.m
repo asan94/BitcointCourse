@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "BitcointCourse.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [API GET:kPathCourses mappableClass:[BitcointCourse class] completion:^(id objects, NSError *error) {
+        if(error != nil) {
+            
+        } else {
+            
+        }
+        
+    }];    // Do any additional setup after loading the view, typically from a nib.
 }
 
 
