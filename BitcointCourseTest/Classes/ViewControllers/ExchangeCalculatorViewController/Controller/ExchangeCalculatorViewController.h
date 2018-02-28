@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ExchangeRate;
 @interface ExchangeCalculatorViewController : UIViewController
-
+- (instancetype)initWithExchangeRate: (ExchangeRate*)exchangeRate;
 @end

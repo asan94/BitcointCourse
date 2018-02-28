@@ -9,6 +9,7 @@
 #import "ExchangeListViewController.h"
 #import "ExchangeListViewModel.h"
 #import "ExchangeRateCell.h"
+#import "ExchangeCalculatorViewController.h"
 @interface ExchangeListViewController()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) ExchangeListViewModel *viewModel;
@@ -41,17 +42,17 @@
 }
 - (void)setupRAC {
     __weak typeof(self) weakSelf = self;
-    [self.viewModel.startedUpdateContentSignal subscribeNext:^(id x) {
+    [[self.viewModel.startedUpdateContentSignal subscribeNext:^(id x) {
         [weakSelf showHUD];
-    }];
-    [self.viewModel.coursesUpdateSignal subscribeNext:^(id x) {
+    }] dispose];
+    [[self.viewModel.coursesUpdateSignal subscribeNext:^(id x) {
         [weakSelf dismissHUD];
         [weakSelf.tableView reloadData];
-    }];
-    [self.viewModel.errorUpdateSignal subscribeNext:^(NSError* error) {
+    }] dispose];
+    [[self.viewModel.errorUpdateSignal subscribeNext:^(NSError* error) {
         [weakSelf dismissHUD];
         [weakSelf showLoadError:error];
-    }];
+    }] dispose];
     
 }
 
@@ -59,21 +60,22 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return [self.viewModel getCoursesCount];
+    return [self.viewModel getExchangeRateCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *coursesCellIndentifier = @"ExchangeRateCell";
     ExchangeRateCell *cell = [tableView dequeueReusableCellWithIdentifier:coursesCellIndentifier];
-    [cell setupWithExchangeRate:[self.viewModel getCoursesForIndex:indexPath.row]];
+    [cell setupWithExchangeRate:[self.viewModel getExchangeRateForIndex:indexPath.row]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    
+    ExchangeCalculatorViewController* exchangeCalculatorViewController = [[ExchangeCalculatorViewController alloc] initWithExchangeRate:[self.viewModel getExchangeRateForIndex:indexPath.row]];
+    [self.navigationController pushViewController:exchangeCalculatorViewController animated:true];
 }
 /*
 #pragma mark - Navigation

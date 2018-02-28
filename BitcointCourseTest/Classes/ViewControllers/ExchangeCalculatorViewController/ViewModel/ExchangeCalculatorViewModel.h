@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class ExchangeRate;
 @interface ExchangeCalculatorViewModel : NSObject
+@property (nonatomic, strong) NSString *firstExchangeRate;
+@property (nonatomic, strong) NSString *secondExchangeRate;
 
+- (void)setCurrentRate:(BOOL)current;
+- (instancetype)initWittExchangeRate: (ExchangeRate *)exchangeRate;
+- (NSString *)getScreenTitle;
+- (NSString *)getExchangeCurrency;
 @end

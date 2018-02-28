@@ -16,7 +16,7 @@
 @property (nonatomic, strong, readwrite) RACSubject *errorUpdateSignal;
 
 - (void)getCourses;
-- (NSInteger)getCoursesCount;
-- (ExchangeRate*)getCoursesForIndex:(NSInteger)index;
+- (NSInteger)getExchangeRateCount;
+- (ExchangeRate*)getExchangeRateForIndex:(NSInteger)index;
 
 @end

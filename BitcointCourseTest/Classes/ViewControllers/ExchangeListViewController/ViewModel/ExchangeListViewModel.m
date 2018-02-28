@@ -33,10 +33,10 @@
         }
     }];
 }
-- (NSInteger)getCoursesCount{
+- (NSInteger)getExchangeRateCount {
     return self.exchangeRates != nil ? self.exchangeRates.count: 0;
 }
-- (ExchangeRate*)getCoursesForIndex:(NSInteger)index {
+- (ExchangeRate*)getExchangeRateForIndex:(NSInteger)index {
     return self.exchangeRates[index];
 }
 @end
