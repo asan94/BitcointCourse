@@ -7,7 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F1193FEC048CFC35CFCB099 /* Pods_BitcointCourseTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C821A5C2B015E0520D5844F2 /* Pods_BitcointCourseTest.framework */; };
+		AF74BA71061F92C355E27EA3 /* libPods-BitcointCourseTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E4617E5FB5BA4ACE1BAD4C /* libPods-BitcointCourseTest.a */; };
+		E9682DA52046964200381F68 /* ExchangeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9682DA32046964200381F68 /* ExchangeListViewController.m */; };
+		E9682DA62046964200381F68 /* ExchangeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9682DA42046964200381F68 /* ExchangeListViewController.xib */; };
+		E9682DA92046965D00381F68 /* ExchangeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9682DA82046965D00381F68 /* ExchangeListViewModel.m */; };
+		E9682DAD20469C7200381F68 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9682DAC20469C7200381F68 /* BaseViewController.m */; };
+		E9682DAE20469E1F00381F68 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9682DB220469E1F00381F68 /* libAFNetworking.a */; };
+		E9682DAF20469E1F00381F68 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9682DB320469E1F00381F68 /* libMBProgressHUD.a */; };
+		E9682DB020469E1F00381F68 /* libOCMapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9682DB420469E1F00381F68 /* libOCMapper.a */; };
+		E9682DB120469E1F00381F68 /* libReactiveObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9682DB520469E1F00381F68 /* libReactiveObjC.a */; };
+		E9682DBA20469F9E00381F68 /* ExchangeRateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9682DB820469F9E00381F68 /* ExchangeRateCell.m */; };
+		E9682DBB20469F9E00381F68 /* ExchangeRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9682DB920469F9E00381F68 /* ExchangeRateCell.xib */; };
+		E9682DD32046C95600381F68 /* ErrorLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9682DD22046C95600381F68 /* ErrorLoadView.m */; };
+		E9682DD52046C97700381F68 /* ErrorLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9682DD42046C97700381F68 /* ErrorLoadView.xib */; };
+		E9682DDB2046CB4500381F68 /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = E9682DDA2046CB4500381F68 /* UIView+LoadNib.m */; };
+		E9682DE12046D19E00381F68 /* ExchangeCalculatorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9682DE02046D19E00381F68 /* ExchangeCalculatorViewModel.m */; };
+		E9682DE52046D1C000381F68 /* ExchangeCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9682DE32046D1C000381F68 /* ExchangeCalculatorViewController.m */; };
+		E9682DE62046D1C000381F68 /* ExchangeCalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9682DE42046D1C000381F68 /* ExchangeCalculatorViewController.xib */; };
 		FA8109962045D7BA0013C290 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8109952045D7BA0013C290 /* AppDelegate.m */; };
 		FA8109992045D7BA0013C290 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8109982045D7BA0013C290 /* ViewController.m */; };
 		FA81099C2045D7BA0013C290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA81099A2045D7BA0013C290 /* Main.storyboard */; };
@@ -18,20 +34,37 @@
 		FA8109B32045DC010013C290 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8109B22045DC010013C290 /* Network.m */; };
 		FA8109B72045DDAB0013C290 /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8109B62045DDAB0013C290 /* Error.m */; };
 		FA8109BD2045E06B0013C290 /* Mapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8109BC2045E06B0013C290 /* Mapper.m */; };
-		FA8109C02045E0D00013C290 /* AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8109BF2045E0D00013C290 /* AlertController.m */; };
-		FA8109C12045E56D0013C290 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8109C72045E56D0013C290 /* AFNetworking.framework */; };
-		FA8109C22045E56D0013C290 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8109C82045E56D0013C290 /* MBProgressHUD.framework */; };
-		FA8109C32045E56D0013C290 /* OCMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8109C92045E56D0013C290 /* OCMapper.framework */; };
-		FA8109C42045E56D0013C290 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8109CA2045E56D0013C290 /* ReactiveCocoa.framework */; };
-		FA8109C52045E56D0013C290 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8109CB2045E56D0013C290 /* ReactiveSwift.framework */; };
-		FA8109C62045E56D0013C290 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8109CC2045E56D0013C290 /* Result.framework */; };
-		FA8109D52045E96A0013C290 /* BitcointCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8109D42045E96A0013C290 /* BitcointCourse.m */; };
+		FA8109D52045E96A0013C290 /* ExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8109D42045E96A0013C290 /* ExchangeRate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27E4617E5FB5BA4ACE1BAD4C /* libPods-BitcointCourseTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BitcointCourseTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		502F477811171EE6DED870D0 /* Pods-BitcointCourseTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcointCourseTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcointCourseTest/Pods-BitcointCourseTest.release.xcconfig"; sourceTree = "<group>"; };
 		B1E13934B80C80FAD1E5927E /* Pods-BitcointCourseTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcointCourseTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcointCourseTest/Pods-BitcointCourseTest.debug.xcconfig"; sourceTree = "<group>"; };
-		C821A5C2B015E0520D5844F2 /* Pods_BitcointCourseTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcointCourseTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9682DA22046964200381F68 /* ExchangeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeListViewController.h; sourceTree = "<group>"; };
+		E9682DA32046964200381F68 /* ExchangeListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeListViewController.m; sourceTree = "<group>"; };
+		E9682DA42046964200381F68 /* ExchangeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeListViewController.xib; sourceTree = "<group>"; };
+		E9682DA72046965D00381F68 /* ExchangeListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeListViewModel.h; sourceTree = "<group>"; };
+		E9682DA82046965D00381F68 /* ExchangeListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeListViewModel.m; sourceTree = "<group>"; };
+		E9682DAB20469C7200381F68 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E9682DAC20469C7200381F68 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		E9682DB220469E1F00381F68 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9682DB320469E1F00381F68 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9682DB420469E1F00381F68 /* libOCMapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libOCMapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9682DB520469E1F00381F68 /* libReactiveObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReactiveObjC.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9682DB720469F9E00381F68 /* ExchangeRateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeRateCell.h; sourceTree = "<group>"; };
+		E9682DB820469F9E00381F68 /* ExchangeRateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeRateCell.m; sourceTree = "<group>"; };
+		E9682DB920469F9E00381F68 /* ExchangeRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeRateCell.xib; sourceTree = "<group>"; };
+		E9682DD12046C95600381F68 /* ErrorLoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorLoadView.h; sourceTree = "<group>"; };
+		E9682DD22046C95600381F68 /* ErrorLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorLoadView.m; sourceTree = "<group>"; };
+		E9682DD42046C97700381F68 /* ErrorLoadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorLoadView.xib; sourceTree = "<group>"; };
+		E9682DD92046CB4500381F68 /* UIView+LoadNib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadNib.h"; sourceTree = "<group>"; };
+		E9682DDA2046CB4500381F68 /* UIView+LoadNib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadNib.m"; sourceTree = "<group>"; };
+		E9682DDF2046D19E00381F68 /* ExchangeCalculatorViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeCalculatorViewModel.h; sourceTree = "<group>"; };
+		E9682DE02046D19E00381F68 /* ExchangeCalculatorViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeCalculatorViewModel.m; sourceTree = "<group>"; };
+		E9682DE22046D1C000381F68 /* ExchangeCalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeCalculatorViewController.h; sourceTree = "<group>"; };
+		E9682DE32046D1C000381F68 /* ExchangeCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeCalculatorViewController.m; sourceTree = "<group>"; };
+		E9682DE42046D1C000381F68 /* ExchangeCalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeCalculatorViewController.xib; sourceTree = "<group>"; };
 		FA8109912045D7B90013C290 /* BitcointCourseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcointCourseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8109942045D7BA0013C290 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA8109952045D7BA0013C290 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,8 +85,6 @@
 		FA8109BA2045E0380013C290 /* Macroses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macroses.h; sourceTree = "<group>"; };
 		FA8109BB2045E06B0013C290 /* Mapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mapper.h; sourceTree = "<group>"; };
 		FA8109BC2045E06B0013C290 /* Mapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mapper.m; sourceTree = "<group>"; };
-		FA8109BE2045E0D00013C290 /* AlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertController.h; sourceTree = "<group>"; };
-		FA8109BF2045E0D00013C290 /* AlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertController.m; sourceTree = "<group>"; };
 		FA8109C72045E56D0013C290 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8109C82045E56D0013C290 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8109C92045E56D0013C290 /* OCMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OCMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,8 +92,8 @@
 		FA8109CB2045E56D0013C290 /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8109CC2045E56D0013C290 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8109CD2045E5DC0013C290 /* BitcointCourseTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BitcointCourseTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		FA8109D32045E96A0013C290 /* BitcointCourse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitcointCourse.h; sourceTree = "<group>"; };
-		FA8109D42045E96A0013C290 /* BitcointCourse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitcointCourse.m; sourceTree = "<group>"; };
+		FA8109D32045E96A0013C290 /* ExchangeRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeRate.h; sourceTree = "<group>"; };
+		FA8109D42045E96A0013C290 /* ExchangeRate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeRate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +101,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8109C12045E56D0013C290 /* AFNetworking.framework in Frameworks */,
-				FA8109C22045E56D0013C290 /* MBProgressHUD.framework in Frameworks */,
-				FA8109C32045E56D0013C290 /* OCMapper.framework in Frameworks */,
-				FA8109C42045E56D0013C290 /* ReactiveCocoa.framework in Frameworks */,
-				FA8109C52045E56D0013C290 /* ReactiveSwift.framework in Frameworks */,
-				FA8109C62045E56D0013C290 /* Result.framework in Frameworks */,
-				1F1193FEC048CFC35CFCB099 /* Pods_BitcointCourseTest.framework in Frameworks */,
+				E9682DAE20469E1F00381F68 /* libAFNetworking.a in Frameworks */,
+				E9682DAF20469E1F00381F68 /* libMBProgressHUD.a in Frameworks */,
+				E9682DB020469E1F00381F68 /* libOCMapper.a in Frameworks */,
+				E9682DB120469E1F00381F68 /* libReactiveObjC.a in Frameworks */,
+				AF74BA71061F92C355E27EA3 /* libPods-BitcointCourseTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,13 +115,17 @@
 		0C3C62F6968C58D5A7A45897 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9682DB220469E1F00381F68 /* libAFNetworking.a */,
+				E9682DB320469E1F00381F68 /* libMBProgressHUD.a */,
+				E9682DB420469E1F00381F68 /* libOCMapper.a */,
+				E9682DB520469E1F00381F68 /* libReactiveObjC.a */,
 				FA8109C72045E56D0013C290 /* AFNetworking.framework */,
 				FA8109C82045E56D0013C290 /* MBProgressHUD.framework */,
 				FA8109C92045E56D0013C290 /* OCMapper.framework */,
 				FA8109CA2045E56D0013C290 /* ReactiveCocoa.framework */,
 				FA8109CB2045E56D0013C290 /* ReactiveSwift.framework */,
 				FA8109CC2045E56D0013C290 /* Result.framework */,
-				C821A5C2B015E0520D5844F2 /* Pods_BitcointCourseTest.framework */,
+				27E4617E5FB5BA4ACE1BAD4C /* libPods-BitcointCourseTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,6 +137,128 @@
 				502F477811171EE6DED870D0 /* Pods-BitcointCourseTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9682D9D204695F500381F68 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DBE2046AA7600381F68 /* CustomView */,
+				E9682D9E2046960200381F68 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E9682D9E2046960200381F68 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DDC2046D16500381F68 /* ExchangeCalculatorViewController */,
+				E9682DAA20469C6300381F68 /* BaseViewController */,
+				E9682D9F2046960C00381F68 /* ExchangeListViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E9682D9F2046960C00381F68 /* ExchangeListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DA12046962000381F68 /* Controller */,
+				E9682DA02046961A00381F68 /* ViewModel */,
+			);
+			path = ExchangeListViewController;
+			sourceTree = "<group>";
+		};
+		E9682DA02046961A00381F68 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DA72046965D00381F68 /* ExchangeListViewModel.h */,
+				E9682DA82046965D00381F68 /* ExchangeListViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E9682DA12046962000381F68 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DB620469F8200381F68 /* Cell */,
+				E9682DA22046964200381F68 /* ExchangeListViewController.h */,
+				E9682DA32046964200381F68 /* ExchangeListViewController.m */,
+				E9682DA42046964200381F68 /* ExchangeListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9682DAA20469C6300381F68 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DAB20469C7200381F68 /* BaseViewController.h */,
+				E9682DAC20469C7200381F68 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		E9682DB620469F8200381F68 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DB720469F9E00381F68 /* ExchangeRateCell.h */,
+				E9682DB820469F9E00381F68 /* ExchangeRateCell.m */,
+				E9682DB920469F9E00381F68 /* ExchangeRateCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E9682DBE2046AA7600381F68 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DD12046C95600381F68 /* ErrorLoadView.h */,
+				E9682DD22046C95600381F68 /* ErrorLoadView.m */,
+				E9682DD42046C97700381F68 /* ErrorLoadView.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		E9682DD62046CB0700381F68 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DD72046CB1300381F68 /* UI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9682DD72046CB1300381F68 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DD92046CB4500381F68 /* UIView+LoadNib.h */,
+				E9682DDA2046CB4500381F68 /* UIView+LoadNib.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E9682DDC2046D16500381F68 /* ExchangeCalculatorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DDE2046D17E00381F68 /* Controller */,
+				E9682DDD2046D17700381F68 /* ViewModel */,
+			);
+			path = ExchangeCalculatorViewController;
+			sourceTree = "<group>";
+		};
+		E9682DDD2046D17700381F68 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DDF2046D19E00381F68 /* ExchangeCalculatorViewModel.h */,
+				E9682DE02046D19E00381F68 /* ExchangeCalculatorViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E9682DDE2046D17E00381F68 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9682DE22046D1C000381F68 /* ExchangeCalculatorViewController.h */,
+				E9682DE32046D1C000381F68 /* ExchangeCalculatorViewController.m */,
+				E9682DE42046D1C000381F68 /* ExchangeCalculatorViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		FA8109882045D7B90013C290 = {
@@ -127,6 +282,8 @@
 		FA8109932045D7B90013C290 /* BitcointCourseTest */ = {
 			isa = PBXGroup;
 			children = (
+				E9682DD62046CB0700381F68 /* Extensions */,
+				E9682D9D204695F500381F68 /* Classes */,
 				FA8109AB2045DB3C0013C290 /* Controllers */,
 				FA8109AA2045D7EC0013C290 /* Models */,
 				FA8109942045D7BA0013C290 /* AppDelegate.h */,
@@ -160,8 +317,6 @@
 				FA8109BA2045E0380013C290 /* Macroses.h */,
 				FA8109BB2045E06B0013C290 /* Mapper.h */,
 				FA8109BC2045E06B0013C290 /* Mapper.m */,
-				FA8109BE2045E0D00013C290 /* AlertController.h */,
-				FA8109BF2045E0D00013C290 /* AlertController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,8 +360,8 @@
 		FA8109D02045E8DC0013C290 /* Course */ = {
 			isa = PBXGroup;
 			children = (
-				FA8109D32045E96A0013C290 /* BitcointCourse.h */,
-				FA8109D42045E96A0013C290 /* BitcointCourse.m */,
+				FA8109D32045E96A0013C290 /* ExchangeRate.h */,
+				FA8109D42045E96A0013C290 /* ExchangeRate.m */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -273,7 +428,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9682DE62046D1C000381F68 /* ExchangeCalculatorViewController.xib in Resources */,
 				FA8109A12045D7BA0013C290 /* LaunchScreen.storyboard in Resources */,
+				E9682DBB20469F9E00381F68 /* ExchangeRateCell.xib in Resources */,
+				E9682DD52046C97700381F68 /* ErrorLoadView.xib in Resources */,
+				E9682DA62046964200381F68 /* ExchangeListViewController.xib in Resources */,
 				FA81099E2045D7BA0013C290 /* Assets.xcassets in Resources */,
 				FA81099C2045D7BA0013C290 /* Main.storyboard in Resources */,
 			);
@@ -317,7 +476,7 @@
 		};
 		E9C660EB895FC9AEE8FB6E80 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -325,20 +484,16 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/OCMapper/OCMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcointCourseTest/Pods-BitcointCourseTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
@@ -350,15 +505,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8109C02045E0D00013C290 /* AlertController.m in Sources */,
+				E9682DAD20469C7200381F68 /* BaseViewController.m in Sources */,
+				E9682DE12046D19E00381F68 /* ExchangeCalculatorViewModel.m in Sources */,
 				FA8109BD2045E06B0013C290 /* Mapper.m in Sources */,
 				FA8109B72045DDAB0013C290 /* Error.m in Sources */,
-				FA8109D52045E96A0013C290 /* BitcointCourse.m in Sources */,
+				FA8109D52045E96A0013C290 /* ExchangeRate.m in Sources */,
+				E9682DDB2046CB4500381F68 /* UIView+LoadNib.m in Sources */,
 				FA8109992045D7BA0013C290 /* ViewController.m in Sources */,
+				E9682DA52046964200381F68 /* ExchangeListViewController.m in Sources */,
 				FA8109B32045DC010013C290 /* Network.m in Sources */,
 				FA8109A42045D7BA0013C290 /* main.m in Sources */,
+				E9682DBA20469F9E00381F68 /* ExchangeRateCell.m in Sources */,
+				E9682DA92046965D00381F68 /* ExchangeListViewModel.m in Sources */,
 				FA8109962045D7BA0013C290 /* AppDelegate.m in Sources */,
+				E9682DE52046D1C000381F68 /* ExchangeCalculatorViewController.m in Sources */,
 				FA8109B02045DB780013C290 /* APIPath.m in Sources */,
+				E9682DD32046C95600381F68 /* ErrorLoadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

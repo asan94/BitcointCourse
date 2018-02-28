@@ -6,9 +6,9 @@
 //  Copyright © 2018 AsanAmetov. All rights reserved.
 //
 
-#import "BitcointCourse.h"
+#import "ExchangeRate.h"
 
-@implementation BitcointCourse
+@implementation ExchangeRate
 
 
 @end

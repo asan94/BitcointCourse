@@ -15,5 +15,6 @@
 #import "Mapper.h"
 #import "APIPath.h"
 #import "Error.h"
-
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "UIView+LoadNib.h"
 #endif /* PrefixHeader_h */

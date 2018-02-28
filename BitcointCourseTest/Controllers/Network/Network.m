@@ -8,7 +8,7 @@
 
 #import "Network.h"
 #import "APIPath.h"
-#import "BitcointCourse.h"
+#import "ExchangeRate.h"
 @interface Network()
 
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
@@ -38,15 +38,15 @@ static Network *network;
     [self.manager GET:[NSString stringWithFormat:@"%@%@", kBaseUrl, kPathCourses] parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSMutableArray* courses = [NSMutableArray new];
+        NSMutableArray* rates = [NSMutableArray new];
         NSDictionary* json = [responseObject dictionary];
         for (NSString* key in json.allKeys) {
             //только для нашего случая
-            BitcointCourse* course = [Mapper map:json[key] class:cClass];
-            course.currencyCode = key;
-            [courses addObject:course];
+            ExchangeRate* rate = [Mapper map:json[key] class:cClass];
+            rate.currencyCode = key;
+            [rates addObject:rate];
         }
-        completion(courses, nil);
+        completion(rates, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", [[NSString alloc] initWithData:error.userInfo[@"com.alamofire.serialization.response.error.data"] encoding:NSUTF8StringEncoding]);
         

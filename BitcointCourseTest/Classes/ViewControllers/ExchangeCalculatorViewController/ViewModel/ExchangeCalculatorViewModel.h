@@ -1,14 +1,13 @@
 //
-//  AlertController.h
+//  ExchangeCalculatorViewModel.h
 //  BitcointCourseTest
 //
-//  Created by MacBook on 27.02.2018.
+//  Created by Asan on 28.02.2018.
 //  Copyright © 2018 AsanAmetov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
-@interface AlertController : NSObject
+@interface ExchangeCalculatorViewModel : NSObject
 
 @end

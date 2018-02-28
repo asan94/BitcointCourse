@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BitcointCourse : NSObject
+@interface ExchangeRate : NSObject
 @property (strong, nonatomic) NSString *symbol;
 @property (strong, nonatomic) NSString *currencyCode;
 @property (assign, nonatomic) CGFloat last;
