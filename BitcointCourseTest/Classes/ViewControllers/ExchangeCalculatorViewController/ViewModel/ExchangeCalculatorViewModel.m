@@ -22,9 +22,9 @@
     return self;
 }
 - (void)observFirstRate {
-    [[RACObserve(self, firstExchangeRate) subscribeNext:^(id  _Nullable first) {
+    [RACObserve(self, firstExchangeRate) subscribeNext:^(id  _Nullable first) {
         self.secondExchangeRate = [NSString stringWithFormat:@"%.02f", [self getRate]];
-    }] dispose];
+    }];
 }
 - (NSString* )getScreenTitle {
     return self.exchangeRate.currencyCode;

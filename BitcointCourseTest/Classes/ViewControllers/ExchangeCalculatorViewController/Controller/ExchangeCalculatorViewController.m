@@ -43,14 +43,14 @@
 - (void)setupRAC {
     
     RAC(self.viewModel, firstExchangeRate) = [self.firstTextField.rac_textSignal distinctUntilChanged];
-    [[RACObserve(self.viewModel, firstExchangeRate) subscribeNext:^(NSString* first) {
+    [RACObserve(self.viewModel, firstExchangeRate) subscribeNext:^(NSString* first) {
         if ([first hasPrefix:@"0"]) {
             self.firstTextField.text = @"";
         }
-    }] dispose];
-    [[RACObserve(self.viewModel, secondExchangeRate) subscribeNext:^(NSString* second) {
+    }];
+    [RACObserve(self.viewModel, secondExchangeRate) subscribeNext:^(NSString* second) {
         self.secondTextField.text = second;
-    }] dispose]];
+    }];
 }
 - (IBAction)replaceExchareHandler:(UIButton *)sender {
     self.currentCurrency = !self.currentCurrency;

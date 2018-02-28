@@ -42,17 +42,17 @@
 }
 - (void)setupRAC {
     __weak typeof(self) weakSelf = self;
-    [[self.viewModel.startedUpdateContentSignal subscribeNext:^(id x) {
+    [self.viewModel.startedUpdateContentSignal subscribeNext:^(id x) {
         [weakSelf showHUD];
-    }] dispose];
-    [[self.viewModel.coursesUpdateSignal subscribeNext:^(id x) {
+    }];
+    [self.viewModel.coursesUpdateSignal subscribeNext:^(id x) {
         [weakSelf dismissHUD];
         [weakSelf.tableView reloadData];
-    }] dispose];
-    [[self.viewModel.errorUpdateSignal subscribeNext:^(NSError* error) {
+    }];
+    [self.viewModel.errorUpdateSignal subscribeNext:^(NSError* error) {
         [weakSelf dismissHUD];
         [weakSelf showLoadError:error];
-    }] dispose];
+    }];
     
 }
 

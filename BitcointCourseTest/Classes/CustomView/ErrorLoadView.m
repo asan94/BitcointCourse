@@ -35,7 +35,7 @@
     if (self) {
         [self loadNib];
         self.frame = [UIScreen mainScreen].bounds;
-        if (error.code == -1) {
+        if (error.code == -1009) { //-1009 not internet connection
             self.errorImageView.image = [UIImage imageNamed:@"loadErrorNetwork"];
             self.toSettingsButton.hidden = NO;
         } else {

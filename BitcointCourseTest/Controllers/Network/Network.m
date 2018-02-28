@@ -32,30 +32,53 @@ static Network *network;
     [serializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [serializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [self.manager setRequestSerializer: serializer];
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+    }];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 }
 
 - (void)GET:(NSString *)path mappableClass:(Class)cClass  completion:(ObjectArrayCompletionBlock)completion {
-    [self.manager GET:[NSString stringWithFormat:@"%@%@", kBaseUrl, kPathCourses] parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+    [self.manager GET:[NSString stringWithFormat:@"%@%@", kBaseUrl, path] parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSMutableArray* rates = [NSMutableArray new];
-        NSDictionary* json = [responseObject dictionary];
-        for (NSString* key in json.allKeys) {
-            //только для нашего случая
-            ExchangeRate* rate = [Mapper map:json[key] class:cClass];
-            rate.currencyCode = key;
-            [rates addObject:rate];
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary* json = [responseObject dictionary];
+            for (NSString* key in json.allKeys) {
+                //только для нашего случая
+                ExchangeRate* rate = [Mapper map:json[key] class:cClass];
+                rate.currencyCode = key;
+                [rates addObject:rate];
+            }
+            completion(rates, nil);
+        } else{
+            id obj = [Mapper map:responseObject class:cClass];
+            completion(obj, nil);
         }
-        completion(rates, nil);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", [[NSString alloc] initWithData:error.userInfo[@"com.alamofire.serialization.response.error.data"] encoding:NSUTF8StringEncoding]);
         
         NSData *errorData = error.userInfo[@"com.alamofire.serialization.response.error.data"];
         
         NSError *jsonError;
-        if (errorData == nil) {
-            completion(nil, [NSError errorWithDomain:@"" code:-1 userInfo:@{NSLocalizedDescriptionKey : @"Нет соединения с интернетом"}]);
+
+        if (error.code == -1009) {
+            completion(nil, [NSError errorWithDomain:@"" code:error.code userInfo:@{NSLocalizedDescriptionKey : @"Нет соединения с интернетом"}]);
             return ;
+        }
+        if (error.code == 500) {
+            completion(nil, [NSError errorWithDomain:@"" code:-1 userInfo:@{NSLocalizedDescriptionKey : @"Сервер временно недоступен"}]);
+            return ;
+        }
+        if (error.code == 403 || error.code == 400) {
+            completion(nil, [NSError errorWithDomain:@"" code:-1 userInfo:@{NSLocalizedDescriptionKey : @"Нет доступа"}]);
+            return ;
+        }
+        if (errorData == nil) {
+            completion(nil, error);
+            return;
         }
         id errorDict = [NSJSONSerialization JSONObjectWithData:errorData options:NSJSONReadingMutableContainers error: &jsonError];
         id obj = [Mapper map:errorDict class:cClass];
