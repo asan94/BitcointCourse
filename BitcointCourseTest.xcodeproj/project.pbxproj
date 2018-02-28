@@ -659,7 +659,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UGRF3977X;
-				GCC_PREFIX_HEADER = /Users/asanametov/Downloads/Bitcoint/BitcointCourse/BitcointCourseTest/SupportingFiles/PrefixHeader.h;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BitcointCourseTest/SupportingFiles/PrefixHeader.h";
 				INFOPLIST_FILE = BitcointCourseTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -681,7 +681,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UGRF3977X;
-				GCC_PREFIX_HEADER = /Users/asanametov/Downloads/Bitcoint/BitcointCourse/BitcointCourseTest/SupportingFiles/PrefixHeader.h;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BitcointCourseTest/SupportingFiles/PrefixHeader.h";
 				INFOPLIST_FILE = BitcointCourseTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
