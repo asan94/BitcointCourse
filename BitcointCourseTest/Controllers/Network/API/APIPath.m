@@ -8,5 +8,5 @@
 
 #import "APIPath.h"
 
-NSString *kPathCourses = @"markets.json";
-NSString *kBaseUrl = @"https://api.bitcoincharts.com/v1/";
+NSString *kPathCourses = @"ticker";
+NSString *kBaseUrl = @"https://blockchain.info/ru/";

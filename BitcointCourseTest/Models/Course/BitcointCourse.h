@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface BitcointCourse : NSObject
-@property (strong, nonatomic) NSString *currency;
 @property (strong, nonatomic) NSString *symbol;
-@property (strong, nonatomic) NSString *ask;
-@property (strong, nonatomic) NSString *low;
-@property (assign, nonatomic) double weighted_price;
+@property (strong, nonatomic) NSString *currencyCode;
+@property (assign, nonatomic) CGFloat last;
+@property (assign, nonatomic) CGFloat sell;
+@property (assign, nonatomic) CGFloat buy;
 @end

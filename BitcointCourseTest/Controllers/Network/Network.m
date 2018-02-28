@@ -8,6 +8,7 @@
 
 #import "Network.h"
 #import "APIPath.h"
+#import "BitcointCourse.h"
 @interface Network()
 
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
@@ -28,20 +29,24 @@ static Network *network;
 - (void)setupEnv {
     self.manager = [[AFHTTPSessionManager alloc] initWithBaseURL: [NSURL URLWithString:kBaseUrl]];
     AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
-    [serializer setValue:@"text/html" forHTTPHeaderField:@"Content-Type"];
-    [serializer setValue:@"text/html" forHTTPHeaderField:@"Accept"];
+    [serializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [serializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [self.manager setRequestSerializer: serializer];
 }
-- (NSDictionary*)baseParams {
-    
-    return @{@"Content-type" : @"text/html; charset=utf-8"};
-}
+
 - (void)GET:(NSString *)path mappableClass:(Class)cClass  completion:(ObjectArrayCompletionBlock)completion {
     [self.manager GET:[NSString stringWithFormat:@"%@%@", kBaseUrl, kPathCourses] parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        id obj = [Mapper map:responseObject class:cClass];
-        completion(obj, nil);
+        NSMutableArray* courses = [NSMutableArray new];
+        NSDictionary* json = [responseObject dictionary];
+        for (NSString* key in json.allKeys) {
+            //только для нашего случая
+            BitcointCourse* course = [Mapper map:json[key] class:cClass];
+            course.currencyCode = key;
+            [courses addObject:course];
+        }
+        completion(courses, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", [[NSString alloc] initWithData:error.userInfo[@"com.alamofire.serialization.response.error.data"] encoding:NSUTF8StringEncoding]);
         

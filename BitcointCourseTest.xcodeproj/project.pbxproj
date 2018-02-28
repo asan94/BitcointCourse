@@ -432,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -481,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -496,8 +496,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MG69ZAJ875;
-				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/BitcointCourseTest/BitcointCourseTest/SupportingFiles/PrefixHeader.h;
+				DEVELOPMENT_TEAM = 9UGRF3977X;
+				GCC_PREFIX_HEADER = /Users/asanametov/Downloads/Bitcoint/BitcointCourse/BitcointCourseTest/SupportingFiles/PrefixHeader.h;
 				INFOPLIST_FILE = BitcointCourseTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -518,8 +518,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MG69ZAJ875;
-				GCC_PREFIX_HEADER = /Users/macbook/Documents/Projects/BitcointCourseTest/BitcointCourseTest/SupportingFiles/PrefixHeader.h;
+				DEVELOPMENT_TEAM = 9UGRF3977X;
+				GCC_PREFIX_HEADER = /Users/asanametov/Downloads/Bitcoint/BitcointCourse/BitcointCourseTest/SupportingFiles/PrefixHeader.h;
 				INFOPLIST_FILE = BitcointCourseTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
